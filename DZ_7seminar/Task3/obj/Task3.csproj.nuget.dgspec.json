@@ -1,0 +1,110 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\DZ_7seminar\\Task3\\Task3.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\DZ_7seminar\\Task3\\Task3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\DZ_7seminar\\Task3\\Task3.csproj",
+        "projectName": "Task3",
+        "projectPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\DZ_7seminar\\Task3\\Task3.csproj",
+        "packagesPath": "C:\\Users\\a.silaenkov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\DZ_7seminar\\Task3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.silaenkov\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj": {
+                "projectPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj",
+        "projectName": "Lib",
+        "projectPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj",
+        "packagesPath": "C:\\Users\\a.silaenkov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.silaenkov\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

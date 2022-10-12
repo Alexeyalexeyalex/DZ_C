@@ -8,7 +8,7 @@ using static System.Console;
 Clear();
 
 WriteLine("Введите данные b1, k1, b2 и k2:");
-string[] inputArray = ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+string[] inputArray = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 getXY(inputArray);
 
 

@@ -7,7 +7,7 @@ using static System.Console;
 
 Clear();
 WriteLine("Введите числа:");
-string[] inputArray = ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries);
+string[] inputArray = ReadLine()!.Split(" ",StringSplitOptions.RemoveEmptyEntries);
 
 WriteLine(getSumEven(inputArray));
 
