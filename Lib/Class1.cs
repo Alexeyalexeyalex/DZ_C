@@ -77,9 +77,9 @@ public class MyArray
     public static int[,] CreateSpiralMatrix(int row, int column)
     {
         int[,] result = new int[row, column];
-        int num = 1, n = 0, i = 0, j = 0,m=1;
-        result[0,0] = num;
-        while (m != row*column)
+        int num = 1, n = 0, i = 0, j = 0, m = 1;
+        result[0, 0] = num;
+        while (m != row * column)
         {
             while (n != 3)
             {
@@ -91,7 +91,7 @@ public class MyArray
                     {
                         result[i, j] = num;
                     }
-                    continue;
+                    m++;
                 }
                 else n = 3;
             }
@@ -106,11 +106,11 @@ public class MyArray
                     {
                         result[i, j] = num;
                     }
-                    continue;
+                    m++;
                 }
                 else n = 4;
             }
-            
+
             while (n != 5)
             {
                 if (j > 0 && result[i, j - 1] == 0)
@@ -121,7 +121,7 @@ public class MyArray
                     {
                         result[i, j] = num;
                     }
-                    continue;
+                    m++;
                 }
                 else n = 5;
             }
@@ -135,11 +135,11 @@ public class MyArray
                     {
                         result[i, j] = num;
                     }
-                    continue;
+                    m++;
                 }
                 else n = 6;
             }
-            m ++;
+
         }
 
 
