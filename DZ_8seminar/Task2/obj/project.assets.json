@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Lib/1.0.0": {
+      "type": "project",
+      "path": "../../Lib/Lib.csproj",
+      "msbuildProject": "../../Lib/Lib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Lib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\a.silaenkov\\.nuget\\packages\\": {}
@@ -28,7 +47,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj": {
+              "projectPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

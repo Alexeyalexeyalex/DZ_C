@@ -74,129 +74,126 @@ public class MyArray
         return intValue;
     }
 
+    ///<summary>
+    ///Создает спиральную матрицу
+    ///<summary>
     public static int[,] CreateSpiralMatrix(int row, int column)
     {
         int[,] result = new int[row, column];
-        int num = 1, n = 0, i = 0, j = 0, m = 1;
+        int num = 1, i = 0, j = 0, m = 1;
+        string n = string.Empty;
         result[0, 0] = num;
         while (m != row * column)
         {
-            while (n != 3)
+            while (n != "Right")
             {
                 if (j < column - 1 && result[i, j + 1] == 0)
                 {
                     j++;
                     num++;
                     if (result[i, j] == 0)
-                    {
+
                         result[i, j] = num;
-                    }
+
                     m++;
                 }
-                else n = 3;
+                else n = "Right";
             }
 
-            while (n != 4)
+            while (n != "Down")
             {
                 if (i < row - 1 && result[i + 1, j] == 0)
                 {
                     i++;
                     num++;
-                    if (result[i, j] == 0)
-                    {
-                        result[i, j] = num;
-                    }
+
+                    result[i, j] = num;
+
                     m++;
                 }
-                else n = 4;
+                else n = "Down";
             }
 
-            while (n != 5)
+            while (n != "Left")
             {
                 if (j > 0 && result[i, j - 1] == 0)
                 {
                     j--;
                     num++;
-                    if (result[i, j] == 0)
-                    {
-                        result[i, j] = num;
-                    }
+
+                    result[i, j] = num;
+
                     m++;
                 }
-                else n = 5;
+                else n = "Left";
             }
-            while (n != 6)
+            while (n != "Up")
             {
                 if (i > 0 && result[i - 1, j] == 0)
                 {
                     i--;
                     num++;
-                    if (result[i, j] == 0)
-                    {
-                        result[i, j] = num;
-                    }
+
+                    result[i, j] = num;
+
                     m++;
                 }
-                else n = 6;
+                else n = "Up";
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-        // int num = 1, i = 0, j = 1, a = column - 2, b = row - 2, columnI = 0,d = 0;
-
-
-        // for (int n = 0; n < 2; n++)
-        // {
-        //     for (; i < column; i++)
-        //     {
-        //         result[columnI, i] = num;
-        //         num++;
-        //     }
-        //     for (; j < row; j++)
-        //     {
-        //         result[j, column - 1] = num;
-        //         num++;
-        //     }
-        //     for (; a >= columnI; a--)
-        //     {
-        //         result[column - 1, a] = num;
-        //         num++;
-        //     }
-        //     for (; b != columnI; b--)
-        //     {
-        //         result[b, columnI] = num;
-        //         num++;
-        //     }
-        //     column -= 1;
-        //     row -= 1;
-        //     d++;
-        //     i=d;
-        //     j=d;
-        //     a=d;
-        //     b=d;
-        //     columnI ++;
-
-
-        // for (int i = 1; i < column-1; i++)
-        // {
-        //     result[1, i] = num;
-        //     num++;
-        // }
-
-        // }
-
-
-
         return result;
+    }
+
+    ///<summary>
+    ///Сортировка чисел в строках матрицы по убыванию
+    ///<summary>
+    public static int[,] SortMatrixRow(int[,] matrix)
+    {
+        int[,] result = new int[matrix.GetLength(0), matrix.GetLength(1)];
+        for (int j = 0; j < matrix.GetLength(0); j++)
+        {
+            int[] matrixRow = new int[matrix.GetLength(0)];
+            for (int i = 0; i < matrix.GetLength(1); i++)
+            {
+                matrixRow[i] = matrix[j, i];
+            }
+            Array.Sort(matrixRow);
+            for (int i = 0; i < matrix.GetLength(1); i++)
+            {
+                result[j, i] = matrixRow[^(i + 1)];
+            }
+
+        }
+        return result;
+    }
+
+    ///<summary>
+    ///Нахождение строки с минимальной суммой чисел
+    ///<summary>
+    public static void MinSumRowInMatrix(int[,] matrix)
+    {
+        int result = 1, minRow = new int();
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            int sum = new int();
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                sum += matrix[i, j];
+            }
+            minRow = minRow == 0 ? sum : minRow;
+            if (sum < minRow)
+            {
+                minRow = sum;
+                result = i + 1;
+            }
+        }
+        WriteLine($"Минимальная сумма в {result} строке");
+    }
+
+    public static int[,] matrixMultiplication(int[,] firstMatrix, int[,] secondmatrix)
+    {
+        
     }
 }
 
