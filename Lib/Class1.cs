@@ -19,7 +19,7 @@ public class MyArray
     }
 
     ///<summary>
-    ///Создание матрицы со случайными числами
+    ///Создание двумерной матрицы со случайными числами
     ///<summary>
     public static int[,] CreateMatrix(int row, int column, int minValue, int maxValue)
     {
@@ -191,9 +191,72 @@ public class MyArray
         WriteLine($"Минимальная сумма в {result} строке");
     }
 
+    ///<summary>
+    ///Перемножение матриц
+    ///<summary>
     public static int[,] matrixMultiplication(int[,] firstMatrix, int[,] secondmatrix)
     {
-        
+        int[,] result = new int[firstMatrix.GetLength(0), secondmatrix.GetLength(1)];
+        for (int i = 0; i < result.GetLength(0); i++)
+        {
+            for (int j = 0; j < result.GetLength(1); j++)
+            {
+                for (int n = 0; n < firstMatrix.GetLength(1); n++)
+                {
+                    result[i, j] += firstMatrix[i, n] * secondmatrix[n, j];
+                }
+            }
+        }
+
+        return result;
+    }
+    ///<summary>
+    ///Создание трехмерной матрицы со случайными числами
+    ///<summary>
+    public static int[,,] CreateMatrix(int row, int column, int depth, int minValue, int maxValue)
+    {
+        Random rnd = new Random();
+        int[] randomNumberArray = new int[maxValue];
+        int[,,] result = new int[row, column, depth];
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < column; j++)
+            {
+                for (int k = 0; k < depth; k++)
+                {
+                    int randomNumber = rnd.Next(minValue, maxValue + 1);
+                    for (int n = 0; n < randomNumberArray.Length; n++)
+                    {
+                        if (randomNumber == randomNumberArray[n])
+                        {
+                            n = 0;
+                            randomNumber = rnd.Next(minValue, maxValue + 1);
+                        }
+                        else result[i, j, k] = randomNumber;
+                    }
+
+                }
+            }
+        }
+        return result;
+    }
+
+    ///<summary>
+    ///Печать трехмерной матрицы int
+    ///<summary>
+    public static void PrintThreeMatrix(int[,,] matrix)
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                for (int k = 0; k < matrix.GetLength(2); k++)
+                {
+                    Write($"{matrix[i, j, k]} ");
+                }
+            }
+            WriteLine();
+        }
     }
 }
 

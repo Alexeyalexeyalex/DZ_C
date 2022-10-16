@@ -12,7 +12,7 @@ using static System.Console;
 using Lib;
 
 Clear();
-int row = 4, column = 4, minValue = 1, maxValue = 9;
+int row = 2, column = 2, minValue = 1, maxValue = 9;
 int[,]  firstMatrix = MyArray.CreateMatrix(row,column,minValue,maxValue),
         secondMatrix = MyArray.CreateMatrix(row,column,minValue,maxValue);
 
@@ -20,3 +20,5 @@ int[,]  firstMatrix = MyArray.CreateMatrix(row,column,minValue,maxValue),
 MyArray.PrintMatrix(firstMatrix);
 WriteLine();
 MyArray.PrintMatrix(secondMatrix);
+WriteLine();
+MyArray.PrintMatrix(MyArray.matrixMultiplication(firstMatrix,secondMatrix));

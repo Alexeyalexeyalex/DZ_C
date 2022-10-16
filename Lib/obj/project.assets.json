@@ -8,23 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\a.silaenkov\\.nuget\\packages\\": {}
+    "C:\\Users\\2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj",
+      "projectUniqueName": "C:\\Users\\2\\Desktop\\C#_DZ\\DZ_C\\Lib\\Lib.csproj",
       "projectName": "Lib",
-      "projectPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\Lib.csproj",
-      "packagesPath": "C:\\Users\\a.silaenkov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a.silaenkov\\Desktop\\DZC\\DZ_C\\Lib\\obj\\",
+      "projectPath": "C:\\Users\\2\\Desktop\\C#_DZ\\DZ_C\\Lib\\Lib.csproj",
+      "packagesPath": "C:\\Users\\2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\2\\Desktop\\C#_DZ\\DZ_C\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\a.silaenkov\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\2\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
@@ -46,7 +49,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -55,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

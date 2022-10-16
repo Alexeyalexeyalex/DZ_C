@@ -5,3 +5,13 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+
+using static System.Console;
+using Lib;
+
+Clear();
+int row = 3, column = 3, depth =2, minValue = 1, maxValue = 100;
+
+MyArray.PrintThreeMatrix(MyArray.CreateMatrix(row,column,depth,minValue,maxValue));
+
