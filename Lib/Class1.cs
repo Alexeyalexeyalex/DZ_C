@@ -258,6 +258,25 @@ public class MyArray
             WriteLine();
         }
     }
+    public static string FactorialN(int n)
+    {
+        if (n == 1) return n.ToString();
+        return n + ", " + FactorialN(n - 1);
+
+    }
+
+    public static int SumBetweenMN(int m, int n)
+    {
+        if (m == n) return n;
+        return SumBetweenMN(m + 1, n) + m;
+    }
+
+    public static int AkermanMN(int m, int n)
+    {
+        if (m == 0) return n + 1;
+        if (n == 0) return AkermanMN(m - 1, 1);
+        return AkermanMN(m - 1, AkermanMN(m, n - 1));
+    }
 }
 
 
